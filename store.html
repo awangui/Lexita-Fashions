@@ -20,21 +20,30 @@
 <body>
 	
 	<nav>
-		<label class="logo"><i class="fa fa-gem">Lexita Fashions</i></label>
+		<div class="logo"><i class="fa fa-gem">Lexita Fashions</i></div>
+		<ul class="nav-links">
 		<input type="checkbox" id="check">
-		
-	
-		<label for="check" class="checkbtn"><span class="fa fa-bars" id="bars"></span>
-			<span class="fa fa-times" id="times"></span>
+		<label for="check" class="checkbtn"><i class="fa fa-bars"></i>
 		</label>
-		
-	<ul>
+		<div class="menu">
 		<li><a class="active" href="index.html">HOME</a></li>
-		<li><a href="store.html">STORE</a></li>
+		<li class="dropdown"><a href="store.html" class="dropbtn">STORE</a>
+			<ul class="dropdown-content">
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+			  </ul>
+		</li>
 		<li><a href="login.html">LOGIN</a></li>
-		<li><a href="contact.html">CONTACT US</a></li>
-		<li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+	</div>
+	
 	</ul>
+	<div class="cart">
+			<span><a href="login.html"><i class="fa fa-user fa-lg"></i></a></span>
+			<span><a href="cart.html"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a></span>		
+		</div>
+	
 	</nav>	
+	
     </body>
     </html>
