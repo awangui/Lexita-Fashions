@@ -3,6 +3,8 @@
 	font-family:  'Times New Roman', Times, serif;
 	outline: none;
 	list-style: none;
+	margin:0;
+	padding: 0;
 }
 html{
 	 scroll-behavior: smooth;
@@ -11,6 +13,7 @@ html{
 body{
 	line-height: 1.3;
 	background-color: #fcfcfc;
+	margin: 0;
 }
 
 a{
@@ -47,25 +50,26 @@ header{
 	background-size: cover;
 	position: relative;
 	margin-top: 60px;	
+	
 }
-.decoration{
-	transform: translateX(80px);
+
+.description{
 	width:50%;
-	position: absolute;
 	transform: translateX(-200px);
-     	animation: fade-in 1s forwards 1;
-		 margin-left: 60px;
+    animation: fade-in 1s forwards 1;
+	margin-left: 60px;
+	position: absolute;
 }
-.decoration h1{
-	margin-bottom: 20px;
+.description h1{
+	font-size: 2.4rem;
 }
-.decoration p{
-	transform: translateX(65px);
+.description p{
 	margin-top: 0;
 	color: rgb(63, 60, 60);
 }
 .btn{
 	width: fit-content;
+	height:min-content;
 
 }
 @media screen and (max-width:500px) {
@@ -127,6 +131,8 @@ nav{
 	align-items: center;
 	background-color:#fcb39b;
 	width: 100%;
+	margin: 0;
+	padding: 0;
 	position: fixed;
 	top: 0;
 	z-index: 1;
@@ -135,42 +141,41 @@ nav{
 	text-align: center;
 }
 .logo{
-	font-size: 28px;
+	font-size: 1.5rem;
 	
 }
-
-nav ul{
-	display: flex;
-	text-decoration: none;
-	list-style: none;
-	margin: auto 0;
-}
 nav ul li{
-	margin: 0 2px;
+	margin:10px 2px;
 	
 }
 nav ul li a{
 	font-size: 17px;
 	text-transform: uppercase;
-	padding: 10px;
+	padding: 8px;
 	margin-right: 20px;
 	letter-spacing: 0.5px;
 }
-.links ul li a.active,.links ul li a:hover{
-	transition: 0.02s;
-	border: solid 2px rgb(71, 71, 71);
+.menu{
+	display:flex;
+	
 }
-
-input[type="checkbox"]{
-	display: none;
+.menu li{
+	font-size: 17px;
+	text-transform: uppercase;
+	padding: 8px;
+	margin-right: 15px;
+	letter-spacing: 0.5px;
 }
-nav .checkbtn{
-	display: none;
+.menu li a.active,.menu li a:hover{
+	border-bottom: 2px solid transparent;
 }
-nav  .checkbtn #times{
-	display: none;
+.menu li a.active,.menu li a:hover{
+	transition: 0.3s ease;
+	border-bottom: 2px solid rgb(71, 71, 71);
 }
-
+.dropdown{
+	position: relative;
+}
 .dropdown-content {
 	display: none;
 	position: absolute;
@@ -179,172 +184,80 @@ nav  .checkbtn #times{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 	font-size: 1rem;
-	margin-top: 12px;
-	animation: name duration timing-function delay iteration-count direction fill-mode;
-	padding-left:5px;
-  }
+	margin-top: 13px;
+ }
+ .dropdown-content li + li {
+	margin-top: 10px;
+ }
 
   
-  .dropdown-content a {
+  .dropdown-content li {
 	color: black;
 	text-decoration: none;
 	display: block;
 	text-align: left;
+	padding: 10px 0 10px 5px;
+	margin: 0;
 	
   }
  
-  .dropdown-content a:hover {
+  .dropdown-content li:hover {
 	background-color: #f1f1f1;
-
+	border-bottom: 2px solid transparent;
 	color: #af6b54;
-
-
 }
   
   .dropdown:hover .dropdown-content {
 	display: block;
-  }
-@media screen and (max-width: 840px) {
-	nav{
-		display:block; 
-		padding:0;
-	}
-  nav ul li a {
-  	display: block;
-    width: 100%;
-    text-align: center;
-    padding:5px;
-    font-size: 18px;    
-  }
-  label.logo{
-	display:inline-block;
-	padding:15px 30px;
-
-  }
-
-  nav ul{
-	  display: none;
-	  background-color: #fcb39b;
-	  padding-inline-start: 0;
-	  padding-right: 10px;
-	  padding-left: 10px;
-	  margin: 0;
-  }
-  nav ul li{
-	  text-align: center;
-	  background-color: #fcb39b;
-	  padding: 10px;
-  }
-  nav ul li a{
-	  padding: 15px;
-	 
-  }
-
-  nav .checkbtn #bars{
-	  display: block;
-	  position: absolute;
-	  top:20px;
-	  right:80px;
-	  cursor: pointer;
-  }
-  nav .checkbtn #times{
-	  display: none;
-  }
-  #check:checked  .checkbtn #times{
-	  display: block;
-  }
-  #check:checked .checkbtn #bars{
-	display: none;
-  }
-  #check:checked ~ ul{
-	display: flex;
-	flex-direction: column;
- }
- #check:checked ~ ul{
-	top: 60px;
-   transition: all 0.3s;
 }
 
-}
+/*RESPONSIVE NAVBAR MENU*/
 
-#check{
+input[type="checkbox"]{
 	display: none;
 }
-i{
-	font-weight: lighter;
+.checkbtn{
+	display: none;
+	font-size: 24px;
+	user-select: none;
 }
 
-
-@media screen and (max-width: 500px){
-	header{
-		height: 40vh;
-		width: 100%;
-		}
- 	nav {
-		background-color:#fcb39b;
-		 display: block;
-		 width: 100%;
- 		 top:0;
-		 height: auto;
- 	}
-	 nav ul{
-		 display: block;
-	 }
-	 nav ul li{
+@media (max-width: 768px) {
+	.menu{
+		display: none;
+		right:0;
+		left:0;
+		padding:16px 0;
+		position: absolute;
 		text-align: center;
+		background-color:#fcb39b;
+	}
+	.menu li:hover{
+		display: inline-block;
 		background-color: #fcb39b;
-		padding: 10px;
-		width: 100%;
+		transition: 0.3s;
+	}
+	.menu li + li {
+		margin-top: 12px;
+	}
+	input[type=checkbox]:checked ~ .menu{
+		display: block;
+		
+	}
+	.checkbtn{
 		display:block;
 	}
-	
-	nav .checkbtn{
-		display: block;
-		position: absolute;
-		top:20px;
-		right:15vw;
-		cursor: pointer;
-		font-size: 30px;
+	.dropdown-content{
+		display: inline-block;
+		left: 50%;
+		top:30px;
+		transform: translateX(35%);
+		
 	}
-	label.logo{
-		display: none;
+	.dropdown-content li:hover{
+		background-color: #fcb39b;
 	}
- 	nav ul{
-		 float: right;
-		display: block;
- 		position: fixed;
- 		width: 100%;
- 		height: auto;
- 		background-color:#fcb39b;
- 		opacity: 100;
- 		top:80px;
- 		top: -100%;
- 		text-align: center;
- 		transition: all .5s;
- 	}
- 	nav ul li{
- 		display: block;
- 		margin: 5px 0;
- 		line-height: 20px;
-
- 	}
- 	nav ul li a{
- 		font-size: 20px;
- 	}	 
- 	a:hover,a.active{ 	
- 		color: #000; 	
- 	}
- 	#check:checked ~ ul{
- 		top: 60px;
-		transition: all 0.3s;
- 	}
-	  #check:checked  .checkbtn #times{
-	  display: block;
-  }
-   #check:checked #bars{
-	display: none;
-  }
- }
+}
 
 section{
    grid-template: 1fr 1fr 1fr;
@@ -841,6 +754,7 @@ footer ul li a :hover{
 		max-width: 300px;
 		margin: auto;
 		text-align: center;	
+		
 	  }
 	  
 	  .price {
@@ -861,40 +775,37 @@ footer ul li a :hover{
 		padding: 1;/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 		cursor: pointer;
 	  }
-	  .card h3{
-		  margin: 0;
-		  padding-bottom: 0;
-	  }	  
-	  .card button {
-		border: none;
-		outline: 0;
+	 
+	  .card span button{
+		border: none;		
 		color: white;
-		background-color: #000;
+		background-color:rgb(71, 71, 71);
 		text-align: center;
 		cursor: pointer;
-		width: 100%;
-		font-size: 18px;
-		margin: 0;
-		padding: 0;
+		font-size: 16px;	
+		width: 60%;
+		
 		
 	  }
-	  .card button:hover {
+	  .card span :hover {
 		background-color:rgb(71, 71, 71);
 	  }
-	  .overlay button {
+	  .overlay span {
 		transition: .5s ease;
 		display: none;
+
 	  }
 	  .card:hover .overlay button{			
-		display: block;		
+		display: inline-block;		
 	  }
 	  .listing{
 		  grid-template-columns: 1fr 1fr 1fr 1fr;
 		  display: grid;
 		  gap: 20px;
+		  row-gap: 5em;
 		  justify-content: center;
 		  margin:  0 60px;
-		 margin-bottom:40px;
+		  margin-bottom:40px;
 		 
 	  }
 	  .card{
@@ -907,6 +818,11 @@ footer ul li a :hover{
 		width: 100%;
 		object-fit: cover;
 		max-height: 270px;
+	  }
+	  .title{
+		text-align: center;
+		margin-bottom: 1.5em;
+		font-size: 2.3em;
 	  }
 	  @media screen and (max-width:500px) {
 		.listing{
@@ -1261,16 +1177,28 @@ footer ul li a :hover{
 	justify-content: center;
 	text-align: center;
 	align-items: center;
+	
 }
+@media screen and (max-width:858px) {
+	.row{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	  
+	}
+	.col-sm{
+		padding: 0;
+		margin:0;
+	}
+	
+	}
 .col-sm{
-	padding: 25px;
+	padding:15px;
 	margin:3px;
+	width:150px;
 }
 .col-sm:hover{
 	border: solid 1px #000;
 }
-.categories{
-	margin:auto 5%;
-	margin-bottom: 30px;
-	
+#cart{
+	width: 60%;
 }
