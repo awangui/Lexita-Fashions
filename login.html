@@ -18,22 +18,34 @@
     </head>
      <body>
         <nav>
-            <label class="logo"><i class="far fa-gem">Lexita Fashions</i></label>
+            <div class="logo"><i class="fa fa-gem">Lexita Fashions</i></div>
+            <ul class="nav-links">
             <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">| Menu <i class="fa fa-bars"></i>
+            <label for="check" class="checkbtn"><i class="fa fa-bars"></i>
             </label>
-            
-        <ul>
-            <li><a href="index.html">HOME</a></li>
+            <div class="menu">
+            <li><a  href="index.html">HOME</a></li>
+            <li class="dropdown"><a href="store.html" class="dropbtn">STORE</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                  </ul>
+            </li>
             <li><a class="active" href="login.html">LOGIN</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-            <li><a href="cart.html">CART</a></li>
+        </div>
+        
         </ul>
-        </nav>
+        <div class="cart">
+                <span><a href="login.html"><i class="fa fa-user fa-lg"></i></a></span>
+                <span><a href="cart.html"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a></span>		
+            </div>
+        
+        </nav>	       
         <div class="form">
             <form class="sign" action="login.php" method="post" style="margin-top: 70px;">
               <div class="title">
-              <p><b>Login in</b></p>
+              <p><b>Sign In</b></p>
               </div>
             
               <div class="login">
@@ -108,7 +120,6 @@
         </div>
 </div>
 </div>
-<footer>
-</footer> 
+
 </body>
 </html>
