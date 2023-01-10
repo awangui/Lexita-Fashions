@@ -7,3 +7,14 @@ function myFunction() {
 	}
   }
 
+const observer = new IntersectionObserver(entries =>{
+	entries.forEach(entry =>{
+		const square = entry.target.querySelector('.square');
+	if (entry.isIntersecting){
+		// adding the animation class
+		square.classList.add('square-animation');
+		}
+		square.classList.remove('square-animation');
+	});
+});
+observer.observe(document.querySelector('.square-wrapper'));
