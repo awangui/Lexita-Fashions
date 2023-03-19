@@ -18,19 +18,30 @@
 </head>
 <body>
 	<nav>
-		<label class="logo"><i class="far fa-gem">Lexita Fashions</i></label>
-		
+		<div class="logo"><i class="fa fa-gem">Lexita Fashions</i></div>
+		<ul class="nav-links">
 		<input type="checkbox" id="check">
-		<label for="check" class="checkbtn">| Menu <i class="fa fa-bars"></i>
+		<label for="check" class="checkbtn"><i class="fa fa-bars"></i>
 		</label>
-		
-	<ul>
-		<li><a class="active" href="index.html">HOME</a></li>
-		<li><a href="cart.html">CLOTHING</a></li>
-		<li><a href="contact.html">CONTACT US</a></li>
-		<li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> CART</a></li>
+		<div class="menu">
+		<li><a href="index.html">HOME</a></li>
+		<li class="dropdown"><a href="store.html" class="dropbtn active">STORE</a>
+			<ul class="dropdown-content">
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+			  </ul>
+		</li>
+		<li><a href="login.html">LOGIN</a></li>
+	</div>
+	
 	</ul>
-	</nav>
+	<div class="cart">
+			<span><a href="login.html"><i class="fa fa-user fa-lg"></i></a></span>
+			<span><a href="cart.html"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a></span>		
+		</div>
+	
+	</nav>	>
     <div class="showcase">
             <form>
 				<div class="image">
@@ -44,20 +55,64 @@
 			   
             </form>
 		</div>
-		<div class="body2">
-			<div class="product">
-				<div class="product-img">
-					<img src="./images/62253e1856a15941d557b70f1dfd62bf.jpg">
-					<span class="tag">New</span>
-				</div>
-				<div class="product-listing">
-					<h1 class="name">Black Rainbow hat</h1>
-					<p class="info">Cul de sac</p>
-					<p class="price"></p>
-
-				</div>
-			</div>
-
+		<!--footer-->
+	<div class="footer-main">
+		<div class="contain">
+			<div class="contained">
+		 <ul>
+			 <h4>
+	<span>About Us</span></h4>
+									<li>
+	<a href="about.html">Who we are</a>                            </li>
+									<li>
+	<a href="#">Stories and News</a>                            </li>
+									
+									<li>
+	<a href="#">Customer Testimonials</a>                            </li>
+							</ul>
+						</div>
+	
+						<div class="contained">
+	<ol>
+		<h4>
+			<span>Order and Pickup</span>                        </h4>
+		<li><a href="pickup.html">Order and Pickup process</a></li>
+		<li><a href="#">Order on the Web</a></li>
+		<li><a href="#">Delivery process</a></li>
+		
+		
+	</ol>
+	</div>
+	<div class="contained">
+		<ol>
+			<h4>
+				<span>Policies and standards</span>                        </h4>
+			<li> <a href="#">Privacy policy</a></li>
+			<li><a href="#">Terms of use</a></li>
+			<li><a href="#">Cookie policy</a></li>
+		</ol>
 		</div>
+		<div class="contained">
+		
+			<ol>
+				<h4>
+					<span>Get in touch</span>                        </h4>
+					<address>
+				<li> <a href="#" class="fa fa-twitter">    Twitter</a></li>
+				<li><a href="#" class="fa fa-instagram"> Instagram</a></li>
+				<li><a href="#" class="fa fa-phone">
+					+254 000 000 000
+				</a></li>
+				<li><a href="#" class="fa fa-email">@lexitafashions.co.ke
+				</a></li>
+				<br>
+				<p style="font-size:17px;">© 2021 All rights reserved.</p>
+			</ol>
+			</address>
+			</div>
+	</div>
+	</div>
+	
+	<div class="clear"></div>
 </body>
 </html>
