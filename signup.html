@@ -31,25 +31,27 @@
         </ul>
         </nav>
         <div class="form">
-            <form class="sign" action="login.php" method="post" style="margin-top: 70px;">
+            <form class="sign" action="registration.php" method="post" style="margin-top: 70px;">
               <div class="title">
               <p><b>Sign up</b></p>
               </div>
             
               <div class="login">
-                <label for="uname"><b>Email Address:</b></label>
+                <form name="regForm" method="post" action="registration.php">   
+                <label for="fname"><b>First Name:</b></label>
+                <input type="text" placeholder="Enter First name" name="fname" required>
+                <label for="sname"><b>Surname:</b></label>
+                <input type="text" placeholder="Enter Surname" name="sname" required><br>
+                <label for="address"><b>Email Address:</b></label>
                 <input type="email" placeholder="e.g johndoe@gmail.com" name="address" required>
-                <label for="uname"><b>Username:</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-            
                 <label for="psw"><b>Password:</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
                 </div>
                 <div class="registration">
-                 <p class="'content"><b>Already have an account?</b></p><a href="signup.html"><span class="register">login</span></a><br>
+                 <span class="'content"><b>Already have an account?</b></span><a href="signup.html"><span class="register"> Login</span></a><br>
                  </div>
                  <div class="clear"></div>
-                <button type="button" class="submit">Register</button>
+                <button type="submit" class="submit">Register</button>
                </form>
               </div>
            
